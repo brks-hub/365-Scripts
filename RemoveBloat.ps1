@@ -2166,9 +2166,6 @@ if ($mcafeeinstalled -eq "true") {
                 }
     }
 
-# Create registry key to indicate script has successfully run
-New-Item -Path "HKLM:\SOFTWARE\CustomApp" -Force | Out-Null
-New-ItemProperty -Path "HKLM:\SOFTWARE\CustomApp" -Name "Installed" -Value "True" -PropertyType String -Force | Out-Null
 
 else {
     write-output "Intune detected, skipping removal of apps"
