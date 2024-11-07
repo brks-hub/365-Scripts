@@ -30,7 +30,7 @@ $Publisher = "RemoveBloat Inc."
 $DetectionRule = New-IntuneWin32AppDetectionRuleFile -Existence -FileOrFolder RemoveBloat.exe -Path "C:\RemoveBloat\" -Check32BitOn64System $false -DetectionType "exists"
 
 # Requirement Rule
-$RequirementRule = New-IntuneWin32AppRequirementRule -Architecture "x64" -MinimumSupportedOperatingSystem "W11_21H2"
+$RequirementRule = New-IntuneWin32AppRequirementRule -Architecture "x64" -MinimumSupportedOperatingSystem "W10_21H2"
 
 # Install and Uninstall Commands - The uninstall command has a placeholder since none is specified
 $InstallCommandLine = "$filename /silent"
